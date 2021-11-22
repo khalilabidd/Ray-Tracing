@@ -10,31 +10,31 @@ The intersection of the rays with is calculated using mathematical formulas depe
 A sphere is defined by a center c and a radius r.
 In vector notation, the equation of a sphere is:
 
-‖x-c‖^2=r^2
+<img src="https://render.githubusercontent.com/render/math?math={\LARGE\color{green} || x-c ||^2=r^2}">
 
 Any point on a radius starting from point s and a unit directing vector d can be written as:
 
-x = s + td
+<img src="https://render.githubusercontent.com/render/math?math={\LARGE\color{green}\x = s %2B t.d}">
 
 Where t is its distance between s and x
 
 In our problem, we want to determine the intersection point x between a radius and a sphere. We replace x in the equation of the sphere, we get:
 
-‖S + td-c‖ ^ 2 = r ^ 2
+<img src="https://render.githubusercontent.com/render/math?math={\LARGE\color{green}\||S %2B t.d-c|| ^ 2 = r ^ 2}">
 
-We consider v = s-c to simplify:
+We consider <img src="https://render.githubusercontent.com/render/math?math={\color{green}\v = s-c}"> to simplify:
 
-‖V + td‖ ^ 2 = r ^ 2
+<img src="https://render.githubusercontent.com/render/math?math={\LARGE\color{green}\||V + td|| ^ 2 = r ^ 2}">
 
-v ^ 2 + t ^ 2 d ^ 2 + 2tdv = r²
+<img src="https://render.githubusercontent.com/render/math?math={\LARGE\color{green}\v ^ 2 %2B t ^ 2 d ^ 2 %2B 2t.d.v = r ^ 2}">
 
 Since d is a unit vector we simplify the expression in order to determine t.
 
-t ^ 2 + (2v.d) t + v ^ 2-r ^ 2 = 0
+<img src="https://render.githubusercontent.com/render/math?math={\LARGE\color{green}\t ^ 2 %2B (2v.d).t %2B v ^ 2-r ^ 2 = 0}">
 
 This equation has for solutions:
 
-t = -v.d ± √ ((v.d) ^ 2-4 (v ^ 2-r ^ 2))
+<img src="https://render.githubusercontent.com/render/math?math={\LARGE\color{green}\t = -v.d \pm \sqrt{((v.d) ^ 2-4 (v ^ 2-r ^ 2))}}">
 
 If the quantity under the square root (the discriminant) is negative, then the radius does not intersect the sphere.
 
@@ -42,29 +42,38 @@ The two values of t found by solving this equation are the points where the radi
 
 In order to calculate the reflected radius of a reflecting sphere, we determine the normal of a sphere:
 
-n = (x-c) / ‖x-c‖
+<img src="https://render.githubusercontent.com/render/math?math={\LARGE\color{green}\n = \frac{x-c}{||x-c||}}">
 
 Where x is the point of intersection found before. The direction of reflection can be found by a reflection of d with respect to n, that is
 
-r = d-2 (n.d) n
+<img src="https://render.githubusercontent.com/render/math?math={\LARGE\color{green}\r = d-2 (n.d).n}">
 
-Thus, the reflected ray has the equation
+Thus, the reflected ray has the equation:
 
-y = x + tr
+<img src="https://render.githubusercontent.com/render/math?math={\LARGE\color{green}\y = x %2B t.r}">
+
 
 ## Intersection with plans
 
 A plane is defined by two vectors which do not have the same direction and a point. (In the case of quadrilateral we take the two vectors width and height and the center c)
 We define the normal n to the plane by the vector product of the two vectors contained in the plane
 Any point on a radius starting from point s and a unit directing vector d can be written as:
-x = s + td
+
+<img src="https://render.githubusercontent.com/render/math?math={\LARGE\color{green}\x = s %2B t.d}">
+
 Where t is its distance between s and x
-The vector x-c is perpendicular to the normal vector n:
-(x-c) .n = 0
+The vector <img src="https://render.githubusercontent.com/render/math?math={\color{green}\x-c}"> is perpendicular to the normal vector n:
+
+<img src="https://render.githubusercontent.com/render/math?math={\LARGE\color{green}\(x-c).n = 0}">
+
 We replace x in the expression we get:
-(s-c ​​+ td) .n = 0
-t = ((c-s) .n) / (d.n)
+
+<img src="https://render.githubusercontent.com/render/math?math={\LARGE\color{green}\(s-c %2B t.d) .n = 0}">
+
+<img src="https://render.githubusercontent.com/render/math?math={\LARGE\color{green}\t = \frac{(c-s).n}{(d.n)}}">
+
 We then check if the point x belongs to the quadrilateral contained in the plane by projecting it according to the unit director vector of the quadrilateral of width and height and by comparing if it is less than the dimensions of the rectangle.
+
 ## UML Diagram
 
 ![image](https://user-images.githubusercontent.com/68228290/140061384-8a77fe50-3753-4a45-9e49-803e0252c281.png)
